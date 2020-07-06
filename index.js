@@ -3,7 +3,7 @@ const port = 1234
 const app = express()
 
 app.use('/', express.static('./public'))
-
+app.use('/api', require('./routes/api').route)
 
 app.listen(port, function (err) {
     if (err) {
