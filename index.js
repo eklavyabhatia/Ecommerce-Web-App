@@ -2,6 +2,9 @@ const express = require('express')
 const port = 1234
 const app = express()
 
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+
 app.use('/', express.static('./public'))
 app.use('/api', require('./routes/api').route)
 

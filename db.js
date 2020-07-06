@@ -33,11 +33,13 @@ const Products = db.define('products', {
     },
     manufacturer: Sequelize.STRING,
     price: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.FLOAT,
         allowNull: false,
         defaultValue: 0.0
     }
 })
+
+db.sync().then(() => { console.log('DB synced') }).catch((err) => { console.log(err) })
 
 exports = module.exports = {
     User, Products
