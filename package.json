@@ -1,0 +1,14 @@
+{
+  "name": "ecommercewebapp",
+  "version": "1.0.0",
+  "description": "```\r mysql -u -root -p\r Enter Password: (enter your password)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
