@@ -17,12 +17,13 @@ function createProduct(product) {
     </div>`)
 }
 
-let productList = $('#product-list')
+function addProduct(name, manufacturer, price, done) {
 
-productList.empty()
-
-fetchProducts(function (products) {
-    for (product of products) {
-        productList.append(createProduct(product))
-    }
-})
+    $.post('/api/products', {
+        name: name,
+        manufacturer: manufacturer,
+        price: price
+    }, function (data) {
+        done(data)
+    })
+}
